@@ -1,46 +1,42 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/mildman1848/dispatcharr-plugins/main/catalog.schema.json",
-  "title": "Mildman1848 Dispatcharr Plugin Catalog",
+  "title": "Mildman1848 Dispatcharr Plugin Registry Manifest",
   "type": "object",
-  "required": ["schema_version", "publisher", "plugins"],
+  "required": ["registry_name", "plugins"],
   "additionalProperties": false,
   "properties": {
-    "schema_version": {"const": 1},
-    "publisher": {
-      "type": "object",
-      "required": ["name", "url"],
-      "additionalProperties": false,
-      "properties": {
-        "name": {"type": "string", "minLength": 1},
-        "url": {"type": "string", "format": "uri"}
-      }
+    "registry_name": {
+      "type": "string",
+      "minLength": 1,
+      "not": {"pattern": "(?i)(official|dispatcharr plugins|dispatcharr repo|dispatcharr official)"}
     },
+    "registry_url": {"type": "string", "format": "uri"},
+    "root_url": {"type": "string", "format": "uri"},
     "plugins": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "description", "repository", "license", "release"],
-        "additionalProperties": false,
+        "required": ["slug", "name", "latest_version", "latest_url"],
         "properties": {
-          "id": {"type": "string", "pattern": "^[a-z0-9]+([.-][a-z0-9]+)*$"},
+          "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
           "name": {"type": "string", "minLength": 1},
-          "description": {"type": "string", "minLength": 1},
-          "repository": {"type": "string", "format": "uri"},
-          "license": {"type": "string", "minLength": 1},
-          "dispatcharr": {"type": "object"},
-          "upstream_projects": {"type": "array", "items": {"type": "string", "format": "uri"}},
-          "release": {
-            "type": "object",
-            "required": ["tag_pattern", "asset_pattern", "checksum_asset"],
-            "additionalProperties": false,
-            "properties": {
-              "tag_pattern": {"type": "string"},
-              "asset_pattern": {"type": "string"},
-              "checksum_asset": {"type": "string"}
-            }
-          }
-        }
+          "description": {"type": "string"},
+          "author": {"type": "string"},
+          "maintainers": {"type": "array", "items": {"type": "string"}},
+          "license": {"type": "string"},
+          "deprecated": {"type": "boolean"},
+          "repo_url": {"type": "string", "format": "uri"},
+          "latest_version": {"type": "string", "minLength": 1},
+          "manifest_url": {"type": "string"},
+          "latest_url": {"type": "string", "format": "uri"},
+          "latest_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+          "latest_size": {"type": "number", "minimum": 0},
+          "icon_url": {"type": "string"},
+          "min_dispatcharr_version": {"type": "string"},
+          "max_dispatcharr_version": {"type": ["string", "null"]}
+        },
+        "additionalProperties": true
       }
     }
   }

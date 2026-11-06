@@ -4,13 +4,13 @@ Curated catalog of Dispatcharr plugins maintained by Mildman1848.
 
 ## Add as a plugin source
 
-Use this catalog URL when a Dispatcharr plugin source/catalog consumer is configured:
+Add this manifest URL under Dispatcharr's **Manage Repos / Add Repository**:
 
 ```text
 https://raw.githubusercontent.com/mildman1848/dispatcharr-plugins/main/catalog.json
 ```
 
-The catalog is a discovery document; plugin ZIPs are built by each plugin's GitHub Actions release workflow and attached to tagged GitHub Releases. Do not assume a Dispatcharr version has a native catalog importer—install the ZIP through the method supported by your Dispatcharr version.
+This is a Dispatcharr repository manifest (`registry_name` + `plugins`), not a custom catalog schema. Plugin ZIPs are built by each plugin's GitHub Actions release workflow and attached to tagged GitHub Releases.
 
 ## Plugins
 
@@ -23,7 +23,7 @@ These are independent community plugins, not endorsed by upstream projects or se
 
 ## Catalog format
 
-`catalog.json` follows the schema in [`catalog.schema.json`](catalog.schema.json). Each entry identifies the plugin repository and release download pattern. Release tags use `v<plugin-version>`; each release contains the installable ZIP and `SHA256SUMS`.
+`catalog.json` follows Dispatcharr's [plugin repository manifest specification](https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugin_repo.md) and the local schema in [`catalog.schema.json`](catalog.schema.json). Release downloads are version-pinned GitHub Release ZIP URLs.
 
 ## Development and contribution
 

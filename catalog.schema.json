@@ -17,7 +17,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["slug", "name", "latest_version", "latest_url"],
+        "required": ["slug", "name"],
         "properties": {
           "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
           "name": {"type": "string", "minLength": 1},

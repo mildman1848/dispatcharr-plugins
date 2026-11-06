@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "publisher": {
+    "name": "Mildman1848",
+    "url": "https://github.com/mildman1848"
+  },
+  "plugins": [
+    {
+      "id": "mildman1848.kodiboxarr",
+      "name": "Kodiboxarr",
+      "description": "Kodibox build, playlist and EPG metadata sync with runtime Vavoo stream resolution for Dispatcharr.",
+      "repository": "https://github.com/mildman1848/kodiboxarr",
+      "license": "AGPL-3.0-only",
+      "dispatcharr": {"plugin_version": "0.1.0-dev"},
+      "upstream_projects": [
+        "https://github.com/kodibox32/kodibox",
+        "https://github.com/Dispatcharr/Dispatcharr"
+      ],
+      "release": {
+        "tag_pattern": "v<plugin-version>",
+        "asset_pattern": "kodiboxarr-<plugin-version>.zip",
+        "checksum_asset": "SHA256SUMS"
+      }
+    },
+    {
+      "id": "mildman1848.epgforgearr",
+      "name": "EPGForgearr",
+      "description": "Supplemental XMLTV provider generator and EPG source manager for Dispatcharr.",
+      "repository": "https://github.com/mildman1848/epgforgearr",
+      "license": "AGPL-3.0-only",
+      "dispatcharr": {"plugin_version": "0.3.5-dev"},
+      "upstream_projects": [
+        "https://github.com/Dispatcharr/Dispatcharr",
+        "https://github.com/michaz1988/michaz1988.github.io"
+      ],
+      "release": {
+        "tag_pattern": "v<plugin-version>",
+        "asset_pattern": "epgforgearr-<plugin-version>.zip",
+        "checksum_asset": "SHA256SUMS"
+      }
+    }
+  ]
+}

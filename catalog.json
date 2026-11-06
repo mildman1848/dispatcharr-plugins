@@ -8,7 +8,10 @@
       "description": "Kodibox build, playlist and EPG metadata sync with runtime Vavoo stream resolution for Dispatcharr.",
       "repo_url": "https://github.com/mildman1848/kodiboxarr",
       "author": "Mildman1848",
-      "license": "AGPL-3.0-only"
+      "license": "AGPL-3.0-only",
+      "latest_version": "0.1.0",
+      "latest_url": "https://github.com/mildman1848/kodiboxarr/releases/download/v0.1.0/kodiboxarr-0.1.0.zip",
+      "latest_sha256": "cb03498dbfb906e45b30a720166fe5030a3eb9456edcab7691d09818b2d68ffa"
     },
     {
       "slug": "epgforgearr",

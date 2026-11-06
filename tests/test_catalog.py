@@ -16,7 +16,10 @@ def test_catalog_entries_reference_public_plugin_repositories():
         "latest_url" not in plugin or plugin["latest_url"].endswith(".zip")
         for plugin in catalog["plugins"]
     )
-    assert "latest_url" not in catalog["plugins"][0]
+    kodiboxarr = catalog["plugins"][0]
+    assert kodiboxarr["latest_version"] == "0.1.0"
+    assert kodiboxarr["latest_url"].endswith("/v0.1.0/kodiboxarr-0.1.0.zip")
+    assert len(kodiboxarr["latest_sha256"]) == 64
 
 
 def test_catalog_schema_is_valid_json():

@@ -17,9 +17,13 @@ def test_catalog_entries_reference_public_plugin_repositories():
         for plugin in catalog["plugins"]
     )
     kodiboxarr = catalog["plugins"][0]
-    assert kodiboxarr["latest_version"] == "0.1.0"
-    assert kodiboxarr["latest_url"].endswith("/v0.1.0/kodiboxarr-0.1.0.zip")
+    assert kodiboxarr["latest_version"] == "0.1.1"
+    assert kodiboxarr["latest_url"].endswith("/v0.1.1/kodiboxarr-0.1.1.zip")
     assert len(kodiboxarr["latest_sha256"]) == 64
+    epgforgearr = catalog["plugins"][1]
+    assert epgforgearr["latest_version"] == "0.3.6-dev"
+    assert epgforgearr["latest_url"].endswith("/v0.3.6-dev/epgforgearr-0.3.6-dev.zip")
+    assert len(epgforgearr["latest_sha256"]) == 64
 
 
 def test_catalog_schema_is_valid_json():

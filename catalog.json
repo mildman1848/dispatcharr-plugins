@@ -9,9 +9,9 @@
       "repo_url": "https://github.com/mildman1848/kodiboxarr",
       "author": "Mildman1848",
       "license": "AGPL-3.0-only",
-      "latest_version": "0.1.0",
-      "latest_url": "https://github.com/mildman1848/kodiboxarr/releases/download/v0.1.0/kodiboxarr-0.1.0.zip",
-      "latest_sha256": "cb03498dbfb906e45b30a720166fe5030a3eb9456edcab7691d09818b2d68ffa"
+      "latest_version": "0.1.1",
+      "latest_url": "https://github.com/mildman1848/kodiboxarr/releases/download/v0.1.1/kodiboxarr-0.1.1.zip",
+      "latest_sha256": "8e2a304f3e5c02e112a4bf6c110c0cfb2fd4eaa013d535df6333585718345da1"
     },
     {
       "slug": "epgforgearr",
@@ -20,8 +20,9 @@
       "repo_url": "https://github.com/mildman1848/epgforgearr",
       "author": "Mildman1848",
       "license": "AGPL-3.0-only",
-      "latest_version": "0.3.5-dev",
-      "latest_url": "https://github.com/mildman1848/epgforgearr/releases/download/v0.3.5-dev/epgforgearr-0.3.5-dev.zip"
+      "latest_version": "0.3.6-dev",
+      "latest_url": "https://github.com/mildman1848/epgforgearr/releases/download/v0.3.6-dev/epgforgearr-0.3.6-dev.zip",
+      "latest_sha256": "403939bab5dbb7364fce8f1976437febb67235b34c19f3be6e18906c37cbe8da"
     }
   ]
 }

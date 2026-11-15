@@ -21,8 +21,8 @@ def test_catalog_entries_reference_public_plugin_repositories():
     assert kodiboxarr["latest_url"].endswith("/v0.1.2/kodiboxarr-0.1.2.zip")
     assert len(kodiboxarr["latest_sha256"]) == 64
     epgforgearr = catalog["plugins"][1]
-    assert epgforgearr["latest_version"] == "0.3.7"
-    assert epgforgearr["latest_url"].endswith("/v0.3.7/epgforgearr-0.3.7.zip")
+    assert epgforgearr["latest_version"] == "0.3.8"
+    assert epgforgearr["latest_url"].endswith("/v0.3.8/epgforgearr-0.3.8.zip")
     assert len(epgforgearr["latest_sha256"]) == 64
 
 

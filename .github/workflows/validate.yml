@@ -19,6 +19,7 @@ jobs:
 
       - name: Validate JSON and catalog schema
         run: |
-          python -m pip install --disable-pip-version-check jsonschema
+          python -m pip install --disable-pip-version-check jsonschema pytest
           python -m json.tool catalog.json >/dev/null
           python -m jsonschema -i catalog.json catalog.schema.json
+          pytest -q

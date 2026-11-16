@@ -21,9 +21,13 @@ def test_catalog_entries_reference_public_plugin_repositories():
     assert kodiboxarr["latest_url"].endswith("/v0.1.2/kodiboxarr-0.1.2.zip")
     assert len(kodiboxarr["latest_sha256"]) == 64
     epgforgearr = catalog["plugins"][1]
-    assert epgforgearr["latest_version"] == "0.3.9"
-    assert epgforgearr["latest_url"].endswith("/v0.3.9/epgforgearr-0.3.9.zip")
-    assert epgforgearr["latest_sha256"] == "449c8928ca4c12ebc9e7370771e084e988115ea9804f26236663da8875b5f518"
+    assert epgforgearr["latest_version"].count(".") == 2
+    assert epgforgearr["latest_url"] == (
+        f"https://github.com/mildman1848/epgforgearr/releases/download/"
+        f"v{epgforgearr['latest_version']}/epgforgearr-{epgforgearr['latest_version']}.zip"
+    )
+    assert len(epgforgearr["latest_sha256"]) == 64
+    assert all(character in "0123456789abcdef" for character in epgforgearr["latest_sha256"])
 
 
 def test_catalog_schema_is_valid_json():

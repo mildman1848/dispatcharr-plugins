@@ -20,9 +20,9 @@
       "repo_url": "https://github.com/mildman1848/epgforgearr",
       "author": "Mildman1848",
       "license": "AGPL-3.0-only",
-      "latest_version": "0.3.9",
-      "latest_url": "https://github.com/mildman1848/epgforgearr/releases/download/v0.3.9/epgforgearr-0.3.9.zip",
-      "latest_sha256": "449c8928ca4c12ebc9e7370771e084e988115ea9804f26236663da8875b5f518"
+      "latest_version": "0.4.0",
+      "latest_url": "https://github.com/mildman1848/epgforgearr/releases/download/v0.4.0/epgforgearr-0.4.0.zip",
+      "latest_sha256": "c6815e040a5d87f4db27213ee5c1c402574034e90f5c6810d6c686b6e8ace4c3"
     }
   ]
 }

@@ -9,9 +9,9 @@
       "repo_url": "https://github.com/mildman1848/kodiboxarr",
       "author": "Mildman1848",
       "license": "AGPL-3.0-only",
-      "latest_version": "0.1.3",
-      "latest_url": "https://github.com/mildman1848/kodiboxarr/releases/download/v0.1.3/kodiboxarr-0.1.3.zip",
-      "latest_sha256": "35c007946c63b787d67c616e5215fad6d8d6b40cea2e7e0e03508e7932699bd0"
+      "latest_version": "0.1.4",
+      "latest_url": "https://github.com/mildman1848/kodiboxarr/releases/download/v0.1.4/kodiboxarr-0.1.4.zip",
+      "latest_sha256": "67355b4140d4e42acda0f5fd8765fc04d64faf29414c39860b1f545e1a7a73c1"
     },
     {
       "slug": "epgforgearr",

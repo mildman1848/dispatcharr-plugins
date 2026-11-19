@@ -17,8 +17,11 @@ def test_catalog_entries_reference_public_plugin_repositories():
         for plugin in catalog["plugins"]
     )
     kodiboxarr = catalog["plugins"][0]
-    assert kodiboxarr["latest_version"] == "0.1.2"
-    assert kodiboxarr["latest_url"].endswith("/v0.1.2/kodiboxarr-0.1.2.zip")
+    assert kodiboxarr["latest_version"].count(".") == 2
+    assert kodiboxarr["latest_url"] == (
+        f"https://github.com/mildman1848/kodiboxarr/releases/download/"
+        f"v{kodiboxarr['latest_version']}/kodiboxarr-{kodiboxarr['latest_version']}.zip"
+    )
     assert len(kodiboxarr["latest_sha256"]) == 64
     epgforgearr = catalog["plugins"][1]
     assert epgforgearr["latest_version"].count(".") == 2
